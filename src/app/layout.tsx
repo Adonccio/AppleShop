@@ -1,6 +1,8 @@
-import './globals.css'
+'use client'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Container } from 'reactstrap'
+import Navigationbar from './components/Navigationbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +16,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+  return (<>
+  <Navigationbar/>
+  <Container>
+      {children}
+      </Container>
+      </>
   )
 }
