@@ -1,15 +1,32 @@
 "use client"
 
 import products from '../../../../database.json'
+import Image from "next/image"
+import '../../style.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CartButton from '@/app/components/CartButton';
 
 export default function handler ({params}: any) {
     const product: any = products.find(prod => prod.id === Number(params.id))
-    console.log(product)
 
     return (
         <>
+        <div className="product-page">
+            
+        <div className="product-image">
+        <Image className="card-img-top" src={product.imageUrl} alt={product.name} height={500} width={600} />
+
+        </div>
+
+        <div className="product-details">
+        
         <h1>{product.name}</h1>
-        {JSON.stringify(product, null, 2)}
+        <h3>{product.price}</h3>
+        <p>{product.description}</p>
+        <CartButton/>
+        </div>
+        
+        </div>
         </>
     )
 

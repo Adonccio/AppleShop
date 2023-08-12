@@ -4,6 +4,7 @@ import products from '../../database.json'
 import Container from 'react-bootstrap/Container';
 import { Button } from 'reactstrap';
 import Link from 'next/link';
+import './style.css'
 
 
 
@@ -15,7 +16,7 @@ export default async function Home() {
               <h1 className='mt-5 display-1'>
                 O melhor jeito de comprar produtos Apple
               </h1>
-    <Button color='dark' variant="primary">
+    <Button className='initial-button' color='dark' variant="primary">
     <Link href='/products'>
     Ver Produtos
     </Link></Button>

@@ -4,19 +4,25 @@ import Link from "next/link"
 import React, { useState } from "react"
 import { Button, Card, CardBody, CardSubtitle, Container } from "reactstrap"
 import SuccessToast from "./SuccessToast"
+import '../style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CartButton from "./CartButton"
 
   const ProductCard = ({product}: any) => {
-    const {ToastisOpen, SetToastisOpen}: any= useState(false)
+    
+    const [toastIsOpen, setToastIsOpen] = useState(false)
     const {id, name, imageUrl, price} = product
+    console.log(toastIsOpen)
 
   return (
-    <><Card>
-      <Link href={`/products/${id}`}>
+    <>
+    <Card className="card" >
+      
+      <Link className="product-tittle" href={`/products/${id}`}>
         <Image className="card-img-top" src={imageUrl} alt={product.name} height={300} width={500} />
       </Link>
 
-      <CardBody>
+      <CardBody className="card-name">
         <Link href={`/products/${id}`}>
           <h5 className="card-title" color="dark" style={{ cursor: 'pointer' }}>
             {name}
@@ -27,22 +33,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
           R$ {price}
         </CardSubtitle>
 
-        <Button
-          color="dark"
-          className="pb-2"
-          block
-          onClick={() => {
-            SetToastisOpen(true)
-            setTimeout(() => SetToastisOpen(false), 1000 * 3)
-          } }
-
-        >
-          Adicionar ao Carrinho
-        </Button>
-
+      <CartButton/>
       </CardBody>
+      
     </Card>
-    <SuccessToast toastisOpen={ToastisOpen} setToastisOpen={SetToastisOpen} />
+    
+    <SuccessToast toastisOpen={toastIsOpen} settoastisOpen={setToastIsOpen} />
     </>
   )
 }

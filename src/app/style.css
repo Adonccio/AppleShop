@@ -1,0 +1,34 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1{font-weight: 600;}
+
+.container, .container-list {
+    padding: 30px;
+}
+
+.product-page{
+    display: flex;
+    justify-content: space-around;
+}
+
+.product-details{
+    width: 40%;
+    font-size: 1.25rem;
+    display: grid;
+    gap: 15px;
+    margin: 20px;
+}
+
+.initial-button {
+    margin: 20px;
+}
+.card {
+    text-align: center;
+}
+
+.card-name   {
+    color: #212529 !important;
+}

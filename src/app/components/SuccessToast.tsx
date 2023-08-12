@@ -1,21 +1,25 @@
 import { Button, Toast, ToastBody, ToastHeader } from "reactstrap";
 
-export default function SuccessToast (props:{ toastisOpen: boolean, setToastisOpen: any}) {
+const SuccessToast = (props:{ toastisOpen: any, settoastisOpen: (isOpen: any)=> void} ) => {
     return (
-    <div >
-    <Toast className="p-3 bg-success my-2 rounded" isOpen={props.toastisOpen}
+    <>
+    
+    <Toast className="p-3 bg-success my-2  fixed-bottom  ms-auto me-4 mb-4" isOpen={props.toastisOpen}
     fade>
       <ToastHeader>
         Sucesso!
       </ToastHeader>
-      <ToastBody>
+      <ToastBody className=".text-white">
         Produto Adicionado ao Carrinho!
       </ToastBody>
-      <Button
+      <Button 
           close
-          className="btn-close-white"
-          onClick={() => props.setToastisOpen(false)}
+          className="btn-close-white "
+          onClick={() =>  props.settoastisOpen(false)}
         ></Button>
+      
     </Toast>
-  </div>)
+  </>)
 }
+
+export default SuccessToast
