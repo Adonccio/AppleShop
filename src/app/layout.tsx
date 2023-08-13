@@ -20,10 +20,7 @@ export default function RootLayout({
   <html lang='en'>
   <body className={OpenSans.className}>
     
-  <Navigationbar/>
-  <Container>
       {children}
-      </Container>
   </body>
   </html>
       </>
