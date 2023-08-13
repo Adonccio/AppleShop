@@ -14,7 +14,7 @@ export default async function Home() {
   <main>
     <Container className='py-5 text-center'>
               <h1 className='mt-5 display-1'>
-                O melhor jeito de comprar produtos Apple
+                O melhor jeito de comprar produtos Apple 
               </h1>
     <Button className='initial-button' color='dark' variant="primary">
     <Link href='/products'>

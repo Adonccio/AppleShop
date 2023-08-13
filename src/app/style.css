@@ -1,3 +1,16 @@
+*{
+    text-decoration: none !important;
+}
+
+.logo {
+    font-size: 2rem !important;
+    font-weight: 600;
+}
+
+.nav-items {
+    font-size: 1.5rem;
+}
+
 a {
     text-decoration: none;
     color: white;
@@ -29,6 +42,60 @@ h1{font-weight: 600;}
     text-align: center;
 }
 
-.card-name   {
+a > h5 {
     color: #212529 !important;
+    text-decoration: none !important;
+}
+
+@media (max-width: 1400px) {
+    .product-page{
+        display: grid;
+        text-align: center;
+        place-items: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    .product-details {
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    .product-page{
+        display: grid;
+        text-align: center;
+        place-items: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    .img-item {
+        width: 400px;
+        height: 300px;
+    }
+
+    .product-details {
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .product-page{
+        display: grid;
+        text-align: center;
+        place-items: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    .img-item {
+        width: 350px;
+        height: 200px;
+    }
+
+    .product-details {
+        width: 80%;
+    }
 }

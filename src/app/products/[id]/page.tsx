@@ -14,14 +14,14 @@ export default function handler ({params}: any) {
         <div className="product-page">
             
         <div className="product-image">
-        <Image className="card-img-top" src={product.imageUrl} alt={product.name} height={500} width={600} />
+        <Image className="card-img-top img-item" src={product.imageUrl} alt={product.name} height={500} width={600} />
 
         </div>
 
         <div className="product-details">
         
         <h1>{product.name}</h1>
-        <h3>{product.price}</h3>
+        <h3>R$ {product.price}</h3>
         <p>{product.description}</p>
         <CartButton/>
         </div>
