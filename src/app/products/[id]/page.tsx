@@ -5,12 +5,14 @@ import Image from "next/image"
 import '../../style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartButton from '@/app/components/CartButton';
+import Navigationbar from '@/app/components/Navigationbar';
 
 export default function handler ({params}: any) {
     const product: any = products.find(prod => prod.id === Number(params.id))
 
     return (
         <>
+        <Navigationbar/>
         <div className="product-page">
             
         <div className="product-image">

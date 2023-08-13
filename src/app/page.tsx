@@ -5,12 +5,16 @@ import Container from 'react-bootstrap/Container';
 import { Button } from 'reactstrap';
 import Link from 'next/link';
 import './style.css'
+import Navigationbar from './components/Navigationbar';
 
 
 
 export default async function Home() {
 
   return (<>
+ 
+    <Navigationbar/>
+  <Container>
   <main>
     <Container className='py-5 text-center'>
               <h1 className='mt-5 display-1'>
@@ -22,6 +26,7 @@ export default async function Home() {
     </Link></Button>
     </Container>
   </main>
+  </Container>
     </>
   )
 }
