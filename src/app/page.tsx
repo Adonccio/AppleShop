@@ -6,11 +6,13 @@ import { Button } from 'reactstrap';
 import Link from 'next/link';
 import './style.css'
 import Navigationbar from './components/Navigationbar';
+import { UseCart } from '@/hooks/UseCart';
 
 
 
 export default async function Home() {
-
+  // const { CartContext }: any = UseCart()
+  // console.log(CartContext)
   return (<>
  
     <Navigationbar/>

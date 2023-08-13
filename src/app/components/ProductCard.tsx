@@ -19,7 +19,7 @@ import CartButton from "./CartButton"
     <Card className="card" >
       
       <Link className="product-tittle" href={`/products/${id}`}>
-        <Image className="card-img-top" src={imageUrl} alt={product.name} height={300} width={500} />
+        <Image className="card-img-top img-item" src={imageUrl} alt={product.name} height={300} width={500} />
       </Link>
 
       <CardBody className="card-name">
