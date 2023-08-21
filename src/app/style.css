@@ -21,7 +21,26 @@ h1{font-weight: 600;}
 .container, .container-list {
     padding: 30px;
 }
-
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.imgcart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont {
+    text-align: center;
+}
+.cartimg{
+    margin-left: 70px;
+}
+.tabela {
+    margin:  20px 0px;
+}
 .product-page{
     display: flex;
     justify-content: space-around;
@@ -44,6 +63,10 @@ h1{font-weight: 600;}
 a > h5 {
     color: #212529 !important;
     text-decoration: none !important;
+}
+
+.cartdiv {
+    color: white;
 }
 
 @media (max-width: 1400px) {

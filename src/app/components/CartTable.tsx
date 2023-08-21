@@ -1,51 +1,60 @@
-'use client'
-import { ReactNode, useContext, useEffect, useState } from "react"
-import { createContext } from "vm"
 
-type CartContextType = {
-    cart: any
-    addProduct: (product: any) => void
-    removeProduct: (product: any) => void
-}
+import { useEffect, useState } from "react";
+import CartRow from "./CartRow";
+import { Table } from "reactstrap";
+import { useCartContext } from "../hooks";
+import { table } from "console";
 
-const CartContext: any = createContext({} as CartContextType)
 
-export const CartContextProvider = (
-    props: {
-        children?: ReactNode
-    }
-) => {
-    const [ cart, setCart] = useState<any[]>([])
+export default function CartTable() {
+  const { cart } = useCartContext()
+  const [cartEntries, setCartEntries] = useState([])
 
-    useEffect(() => {
-        const storedCart = localStorage.getItem('cart-appleshop')
-        if(storedCart) {setCart(JSON.parse(storedCart))} else []}
-        )
+  useEffect(() => {
+    const entriesList = cart.reduce((list, product) => {
+      const entryIndex = list.findIndex(entry => entry.product.id === product.id)
+
+      if (entryIndex === -1) {
+        return [
+          ...list,
+          {
+            product,
+            quantity: 1
+          }
+        ]
+      }
+
+      list[entryIndex].quantity++
+      return list
+
+    }, [])
+
+    entriesList.sort((a, b) => a.product.id - b.product.id)
+    setCartEntries(entriesList)
+
+  }, [cart])
+
+  return (<>
+    <Table responsive className="align-middle tabela" style={{ minWidth: '32rem' }}>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>Qtd.</th>
+          <th>Total</th>
+          <th>Editar</th>
+        </tr>
+      </thead>
+      <tbody>
+				{cartEntries.map((entry: any) => 
+        <CartRow key={entry.product.id} entry={entry} />
+        )}
+      </tbody>
+    </Table>
     
-    const addProduct = (product: any) => {
-        const updatedCart = [...cart, product]
-        localStorage.setItem('cart-appleshop', JSON.stringify(updatedCart))
-        setCart(updatedCart)
-    }
-
-    const removeProduct = (prodctId: number) => {
-        const productIndex = cart.findIndex((product) => prodctId === product.id)
-
-        if (prodctId!== -1){
-            const updatedCart = [...cart]
-            updatedCart.splice(productIndex, 1)
-            localStorage.setItem('cart-appleshop', JSON.stringify(updatedCart))
-            setCart(updatedCart)
-        }
-    }
-
-    return (
-        <CartContext.Provider
-          value={{ cart, addProduct, removeProduct }}
-        >
-          {props.children}
-        </CartContext.Provider>
-      );
+    <h2>
+        Total: {cart.reduce((accum, num) => accum + num.price, 0)}
+    </h2></>
+  )
 }
-
-export const UseCart = () => useContext(CartContext)

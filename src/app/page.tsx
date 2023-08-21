@@ -11,8 +11,6 @@ import { UseCart } from '@/hooks/UseCart';
 
 
 export default async function Home() {
-  // const { CartContext }: any = UseCart()
-  // console.log(CartContext)
   return (<>
  
     <Navigationbar/>

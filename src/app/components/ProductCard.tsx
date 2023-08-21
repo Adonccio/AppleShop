@@ -12,6 +12,8 @@ import CartButton from "./CartButton"
     
     const [toastIsOpen, setToastIsOpen] = useState(false)
     const {id, name, imageUrl, price} = product
+   
+
     console.log(toastIsOpen)
 
   return (
@@ -33,7 +35,7 @@ import CartButton from "./CartButton"
           R$ {price}
         </CardSubtitle>
 
-      <CartButton/>
+      <CartButton value={product}/>
       </CardBody>
       
     </Card>

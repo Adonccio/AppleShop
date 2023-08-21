@@ -6,6 +6,7 @@ import '../../style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartButton from '@/app/components/CartButton';
 import Navigationbar from '@/app/components/Navigationbar';
+import { useEffect, useState } from 'react';
 
 export default function handler ({params}: any) {
     const product: any = products.find(prod => prod.id === Number(params.id))
@@ -25,7 +26,7 @@ export default function handler ({params}: any) {
         <h1>{product.name}</h1>
         <h3>R$ {product.price}</h3>
         <p>{product.description}</p>
-        <CartButton/>
+        <CartButton value={product}/>
         </div>
         
         </div>

@@ -2,11 +2,11 @@
 import { Button } from "reactstrap";
 import SuccessToast from "./SuccessToast";
 import { useContext, useEffect, useState } from "react";
-import { BsCart4 } from 'react-icons/bs'
+import { BiSolidPlusCircle } from "react-icons/bi";
 import { createContext } from "vm";
 import { CartProvider, useCartContext } from "../hooks";
 
-export default function CartButton ({value}: any)  {
+export default function OnCartButton ({value}: any)  {
     
   const { cart, addProduct } = useCartContext()
    const [toastIsOpen, setToastIsOpen] = useState(false)
@@ -14,19 +14,19 @@ export default function CartButton ({value}: any)  {
     return <>
     
     <Button
-          color="dark"
+          color="success"
           className="pb-2 btn"
           onClick={() => 
-            {setToastIsOpen(true)
+            {
+            setToastIsOpen(true)
             addProduct(value)
             setTimeout(() => {
               setToastIsOpen(false)
-            }, 2500)}
-            // location.reload();
+            }, 2500);}
            }
 
         >
-          Adicionar ao Carrinho <BsCart4/>
+          <BiSolidPlusCircle/>
         </Button>
     
         <SuccessToast toastisOpen={toastIsOpen} settoastisOpen={setToastIsOpen} />
