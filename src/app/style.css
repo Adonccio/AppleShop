@@ -78,13 +78,17 @@ a > h5 {
         margin: auto;
     }
 
-    img{
+    .img-item{
         width: 450px;
         height: 280px;
     }
 
     .product-details {
         width: 70%;
+    }
+    .cartimg {
+        width: 60px !important;
+        height: 50px !important;
     }
 }
 
@@ -97,13 +101,22 @@ a > h5 {
         margin: auto;
     }
 
-    img {
+    .cartrow {
+        width: 150px;
+
+    }
+
+    .img-item {
         width: 280px !important;
         height: 230px !important;
     }
 
     .product-details {
         width: 80%;
+    }
+    .cartimg {
+        width: 60px !important;
+        height: 50px !important;
     }
 }
 
@@ -117,13 +130,17 @@ a > h5 {
         margin: auto;
     }
 
-    img {
+    .img-item {
         width: 300px !important;
         height: 200px !important;
     }
 
     .product-details {
         width: 80%;
+    }
+    .cartimg {
+        width: 60px !important;
+        height: 50px !important;
     }
 }
 
@@ -137,7 +154,12 @@ a > h5 {
         margin: auto;
     }
 
-    img {
+    .cartimg {
+        width: 60px !important;
+        height: 50px !important;
+    }
+
+    .img-item {
         width: 180px !important;
         height: 130px !important;
     }

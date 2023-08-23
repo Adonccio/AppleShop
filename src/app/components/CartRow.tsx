@@ -13,7 +13,7 @@ export default function CartRow  (props: {entry : any}) {
   return (<>
     <tr><td>
         
-            <Row className="align-items-center">
+            <Row className="align-items-center cartrow">
               {/* <Col xs={4} md={2} lg={1}> */}
                 <div className="imgcart">
                 
