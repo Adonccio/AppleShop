@@ -1,12 +1,10 @@
 'use client'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import products from '../../database.json'
 import Container from 'react-bootstrap/Container';
 import { Button } from 'reactstrap';
 import Link from 'next/link';
 import './style.css'
 import Navigationbar from './components/Navigationbar';
-import { UseCart } from '@/hooks/UseCart';
 
 
 

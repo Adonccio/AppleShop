@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import CartRow from "./CartRow";
 import { Table } from "reactstrap";
 import { useCartContext } from "../hooks";
-import { table } from "console";
 
 
 export default function CartTable() {

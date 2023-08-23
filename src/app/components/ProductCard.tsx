@@ -2,7 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import React, { useState } from "react"
-import { Button, Card, CardBody, CardSubtitle, Container } from "reactstrap"
+import { Card, CardBody, CardSubtitle } from "reactstrap"
 import SuccessToast from "./SuccessToast"
 import '../style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';

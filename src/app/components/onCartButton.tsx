@@ -1,10 +1,9 @@
 
 import { Button } from "reactstrap";
 import SuccessToast from "./SuccessToast";
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import { BiSolidPlusCircle } from "react-icons/bi";
-import { createContext } from "vm";
-import { CartProvider, useCartContext } from "../hooks";
+import { useCartContext } from "../hooks";
 
 export default function OnCartButton ({value}: any)  {
     

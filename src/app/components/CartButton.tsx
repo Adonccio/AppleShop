@@ -1,10 +1,9 @@
 
 import { Button } from "reactstrap";
 import SuccessToast from "./SuccessToast";
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import { BsCart4 } from 'react-icons/bs'
-import { createContext } from "vm";
-import { CartProvider, useCartContext } from "../hooks";
+import { useCartContext } from "../hooks";
 
 export default function CartButton ({value}: any)  {
     
