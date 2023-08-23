@@ -11,8 +11,8 @@ export default function CartTable() {
   const [cartEntries, setCartEntries] = useState([])
 
   useEffect(() => {
-    const entriesList = cart.reduce((list, product) => {
-      const entryIndex = list.findIndex(entry => entry.product.id === product.id)
+    const entriesList = cart.reduce((list: any, product: any) => {
+      const entryIndex = list.findIndex((entry: any) => entry.product.id === product.id)
 
       if (entryIndex === -1) {
         return [
@@ -29,7 +29,7 @@ export default function CartTable() {
 
     }, [])
 
-    entriesList.sort((a, b) => a.product.id - b.product.id)
+    entriesList.sort((a: any,b: any)  => a.product.id - b.product.id)
     setCartEntries(entriesList)
 
   }, [cart])
@@ -54,7 +54,7 @@ export default function CartTable() {
     </Table>
     
     <h2>
-        Total: {cart.reduce((accum, num) => accum + num.price, 0)}
+        Total: {cart.reduce((accum: any, num: any) => accum + num.price, 0)}
     </h2></>
   )
 }
