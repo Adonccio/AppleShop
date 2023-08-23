@@ -1,10 +1,9 @@
 // src/components/CartTable.tsx
 'use client'
 import React from 'react';
-import { render } from 'react-dom';
 import { Row, Col, Button } from 'reactstrap';
 import Image from "next/image";
-import { CartProvider, useCartContext } from '../hooks';
+import { useCartContext } from '../hooks';
 import OnCartButton from './onCartButton';
 import RemoveBtn from './onCartRemove';
 
