@@ -10,10 +10,13 @@
 .nav-items {
     font-size: 1.5rem;
 }
+.navbar{
+    min-width: 100%;
+}
 
-a {
+.productslink {
     text-decoration: none;
-    color: white;
+    color: white !important;
 }
 
 h1{font-weight: 600;}
@@ -28,16 +31,18 @@ h1{font-weight: 600;}
     gap: 5px;
 }
 .imgcart {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
 }
 .cont {
     text-align: center;
 }
-.cartimg{
-    margin-left: 70px;
+
+tr {
+    width: 100%;
 }
+
 .tabela {
     margin:  20px 0px;
 }
@@ -65,6 +70,11 @@ a > h5 {
     text-decoration: none !important;
 }
 
+.img-item{
+    width: 450px;
+    height: 250px;
+}
+
 .cartdiv {
     color: white;
 }
@@ -80,8 +90,10 @@ a > h5 {
 
     .img-item{
         width: 450px;
-        height: 280px;
+        height: 220px;
     }
+
+
 
     .product-details {
         width: 70%;
@@ -89,6 +101,13 @@ a > h5 {
     .cartimg {
         width: 60px !important;
         height: 50px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .img-item {
+        width: 250px !important;
+        height: 210px !important;
     }
 }
 
@@ -100,10 +119,16 @@ a > h5 {
         width: 90%;
         margin: auto;
     }
+    .container{
+        width: 100%;
+        margin: auto;
+        padding: 0px;
+    }
 
     .cartrow {
-        width: 150px;
-
+        width: fit-content;
+        font-size: 5px;
+        overflow: auto
     }
 
     .img-item {
@@ -118,6 +143,16 @@ a > h5 {
         width: 60px !important;
         height: 50px !important;
     }
+    .buttons {
+        display: grid !important;
+    }
+    td{
+        min-width: fit-content;
+        padding: 0px;
+    }
+    button {
+        width: fit-content;
+    }
 }
 
 
@@ -131,7 +166,7 @@ a > h5 {
     }
 
     .img-item {
-        width: 300px !important;
+        width: 250px !important;
         height: 200px !important;
     }
 
@@ -142,18 +177,29 @@ a > h5 {
         width: 60px !important;
         height: 50px !important;
     }
+    table{
+        width: fit-content;
+    }
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 516px) {
     .product-page{
         display: grid;
         text-align: center;
         place-items: center;
-        width: 90%;
+        
         margin: auto;
     }
-
+    
+    .cartrow {
+        width: 220px;
+        font-size: 5px;
+        overflow: auto
+    }
+    .total {
+        margin: 25px !important;
+    }
     .cartimg {
         width: 60px !important;
         height: 50px !important;
@@ -167,4 +213,19 @@ a > h5 {
     .product-details {
         width: 80%;
     }
+    .container  {
+        width: 100%;
+    }
+    table{
+        display: grid;
+        min-width: fit-content !important;
+        place-content: center;
+    }
+    .table-responsive {
+        place-content: center;
+    }
+    tbody, thead{
+        width: 100%;
+    }
+
 }

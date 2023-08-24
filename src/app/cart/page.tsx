@@ -1,10 +1,9 @@
 'use client'
 import Navigationbar from '../components/Navigationbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'reactstrap'
+import { Alert, Button, Container } from 'reactstrap'
 import CartTable from "../components/CartTable";
 import '../style.css'
-
 
 export default function cart () {
     return(
@@ -13,6 +12,9 @@ export default function cart () {
         <Container className="cont">
         <h1>Seu Carrinho</h1>
         <CartTable/>
+        <Button color='success' onClick={() =>alert('Compra concluída com sucesso!') }>
+            Concluir Compra
+        </Button>
         </Container>
     </>
     )

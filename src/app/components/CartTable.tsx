@@ -38,7 +38,6 @@ export default function CartTable() {
       <thead>
         <tr>
           <th>Produto</th>
-          <th>Nome</th>
           <th>Preço</th>
           <th>Qtd.</th>
           <th>Total</th>
@@ -52,7 +51,7 @@ export default function CartTable() {
       </tbody>
     </Table>
     
-    <h2>
+    <h2 className="total">
         Total: {cart.reduce((accum: any, num: any) => accum + num.price, 0)}
     </h2></>
   )

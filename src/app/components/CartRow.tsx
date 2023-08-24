@@ -1,6 +1,7 @@
 // src/components/CartTable.tsx
 'use client'
 import React from 'react';
+import "../style.css"
 import { Row, Col} from 'reactstrap';
 import Image from "next/image";
 import { useCartContext } from '../hooks';
@@ -11,9 +12,10 @@ export default function CartRow  (props: {entry : any}) {
     const {addProduct} = useCartContext()
     
   return (<>
-    <tr><td>
+    <tr>
+      <td>
         
-            <Row className="align-items-center cartrow">
+            <Row className="align-items-center">
               {/* <Col xs={4} md={2} lg={1}> */}
                 <div className="imgcart">
                 
@@ -24,15 +26,13 @@ export default function CartRow  (props: {entry : any}) {
                     height={50}
                     width={60}
                   />
+                  <div className="name"><Col xs={8} md={10} lg={11}>
+                  {props.entry.product.name}
+                </Col></div>
 
                 </div>
               {/* </Col> */}
             </Row>
-    </td>
-    <td>
-        <Col xs={8} md={10} lg={11}>
-                {props.entry.product.name}
-              </Col>
     </td>
       <td>R$ {props.entry.product.price}</td>
       <td>{props.entry.quantity}</td>
