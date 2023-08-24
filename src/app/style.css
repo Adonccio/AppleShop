@@ -7,6 +7,11 @@
     margin: 15px;
 }
 
+.row {
+    width: 100%;
+    margin: 0px !important;
+}
+
 .logo {
     font-size: 2rem !important;
     font-weight: 600;
@@ -19,7 +24,7 @@
     font-size: 1.5rem;
 }
 .navbar{
-    min-width: 100%;
+    max-width: 100%;
 }
 
 .productslink {
@@ -65,7 +70,8 @@ tr {
     margin: 20px;
 }
 .initial-button {
-    margin: 20px;
+    margin: 0px 20px;
+    width: 70%;
 }
 .card {
     text-align: center;
