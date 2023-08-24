@@ -12,7 +12,7 @@ export default function cart () {
         <Container className="cont">
         <h1>Seu Carrinho</h1>
         <CartTable/>
-        <Button color='success' onClick={() =>alert('Compra concluída com sucesso!') }>
+        <Button className='finisbtn' color='success' onClick={() =>alert('Compra concluída com sucesso!') }>
             Concluir Compra
         </Button>
         </Container>

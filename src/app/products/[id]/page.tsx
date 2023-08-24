@@ -17,7 +17,7 @@ export default function handler ({params}: any) {
         <div className="product-page">
             
         <div className="product-image">
-        <Image className="card-img-top img-item" src={product.imageUrl} alt={product.name} height={500} width={600} />
+        <Image className="card-img-top img-item-productpage" src={product.imageUrl} alt={product.name} height={500} width={600} />
 
         </div>
 

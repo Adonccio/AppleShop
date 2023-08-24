@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useCartContext } from '../hooks';
 import OnCartButton from './onCartButton';
 import RemoveBtn from './onCartRemove';
+import Link from 'next/link';
 
 export default function CartRow  (props: {entry : any}) {
     const {addProduct} = useCartContext()
@@ -18,7 +19,7 @@ export default function CartRow  (props: {entry : any}) {
             <Row className="align-items-center">
               {/* <Col xs={4} md={2} lg={1}> */}
                 <div className="imgcart">
-                
+                <Link href={`/products/${props.entry.product.id}`}>
                   <Image
                     className='cartimg'
                     src={props.entry.product.imageUrl}
@@ -29,6 +30,7 @@ export default function CartRow  (props: {entry : any}) {
                   <div className="name"><Col xs={8} md={10} lg={11}>
                   {props.entry.product.name}
                 </Col></div>
+                </Link>
 
                 </div>
               {/* </Col> */}
