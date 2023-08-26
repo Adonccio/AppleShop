@@ -22,6 +22,7 @@
 
 .nav-items {
     font-size: 1.5rem;
+    margin: auto;
 }
 .navbar{
     max-width: 100%;
@@ -70,8 +71,8 @@ tr {
     margin: 20px;
 }
 .initial-button {
-    margin: 0px 20px;
-    width: 70%;
+    margin: 30px 20px;
+    width: 20%;
 }
 .card {
     text-align: center;
@@ -187,6 +188,13 @@ a > h5 {
     .img-item {
         width: 300px !important;
         height: 250px !important;
+    }
+
+    a> .nav-items {
+        margin: auto;
+    }
+    .navbar>.container {
+       text-align: center;
     }
 
     .product-details {
